@@ -36,7 +36,7 @@ CREATE TABLE `feedback` (
   `Category` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,7 @@ CREATE TABLE `products` (
   `ProductName` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `Price` decimal(6,2) NOT NULL,
   `Type` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,7 @@ CREATE TABLE `users` (
   `Username` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `Password` varchar(15) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `EmailAddress` varchar(40) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,7 @@ CREATE TABLE `votes` (
   `VoteID` int NOT NULL,
   `UserID` int NOT NULL,
   `FeedbackID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
