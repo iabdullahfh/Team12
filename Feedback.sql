@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 19, 2020 at 06:19 PM
+-- Generation Time: Feb 21, 2020 at 12:09 PM
 -- Server version: 8.0.19
 -- PHP Version: 7.3.9
 
@@ -36,7 +36,7 @@ CREATE TABLE `feedback` (
   `Category` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,14 @@ CREATE TABLE `products` (
   `ProductName` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `Price` decimal(6,2) NOT NULL,
   `Type` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`ProductID`, `ProductName`, `Price`, `Type`) VALUES
+(1, 'Test product', '2940.18', 'test type');
 
 -- --------------------------------------------------------
 
@@ -62,7 +69,7 @@ CREATE TABLE `users` (
   `Username` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `Password` varchar(15) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL,
   `EmailAddress` varchar(40) CHARACTER SET latin1 COLLATE latin1_general_cs NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -74,7 +81,7 @@ CREATE TABLE `votes` (
   `VoteID` int NOT NULL,
   `UserID` int NOT NULL,
   `FeedbackID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Indexes for dumped tables
@@ -122,7 +129,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ProductID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `ProductID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
