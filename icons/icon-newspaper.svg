@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-newspaper</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Exports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-newspaper">
+            <g>
+                <rect id="bound" x="0" y="0" width="48" height="48"></rect>
+                <path d="M7,7 L29,7" id="Stroke-6102" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polygon id="Stroke-6103" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="7 25 17 25 17 13 7 13"></polygon>
+                <path d="M23,17 L29,17" id="Stroke-6104" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21,21 L29,21" id="Stroke-6105" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21,25 L29,25" id="Stroke-6106" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7,29 L29,29" id="Stroke-6107" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7,33 L29,33" id="Stroke-6108" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7,37 L29,37" id="Stroke-6109" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M39,11 L43,11 L43,41 C43,42.104 42.106,43 41,43 C39.896,43 39,42.104 39,41 L39,4 L35,4 L35,8" id="Stroke-6110" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M41,47 L7,47 C3.688,47 1,44.314 1,41 L1,1 L35,1 L35,41 C35,44.314 37.688,47 41,47 C44.314,47 47,44.314 47,41 L47,7 L39,7" id="Stroke-6111" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

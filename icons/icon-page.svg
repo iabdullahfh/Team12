@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-page</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Exports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-page">
+            <g>
+                <rect id="bound" x="0" y="0" width="48" height="48"></rect>
+                <polygon id="Line-168" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="7 1 31 1 41 11 41 47 7 47"></polygon>
+                <path d="M13,7 L25,7" id="Line-170" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13,17 L35,17" id="Line-170-Copy-2" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13,21 L35,21" id="Line-170-Copy-2" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13,25 L35,25" id="Line-170-Copy-2" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13,29 L35,29" id="Line-170-Copy-2" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13,33 L35,33" id="Line-170-Copy-2" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M13,37 L35,37" id="Line-170-Copy-2" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Line-169" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="31 6 31 11 36 11"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
