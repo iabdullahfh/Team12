@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-name-tag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Exports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-name-tag">
+            <g>
+                <rect id="bound" x="0" y="0" width="48" height="48"></rect>
+                <polyline id="Stroke-1163" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="29 11 47 11 47 45 1 45 1 11 19 11"></polyline>
+                <path d="M18,29 C18,31.208 16.21,33 14,33 C11.79,33 10,31.208 10,29 C10,26.792 11.79,25 14,25 C16.21,25 18,26.792 18,29 L18,29 Z" id="Stroke-1164" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7,39 L21,39 C21,36 19,33 14,33 C9,33 7,36 7,39 Z" id="Stroke-1165" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M29,15 L19,15 L19,7 C19,4.25 21.25,2 24,2 C26.75,2 29,4.25 29,7 L29,15 L29,15 Z" id="Stroke-1166" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M1,19 L47,19" id="Stroke-1167" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M26,39 L42,39" id="Stroke-1168" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M26,35 L42,35" id="Stroke-1169" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M26,31 L42,31" id="Stroke-1170" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M26,25 L34,25" id="Stroke-1171" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M25,6.9902 C25,7.5422 24.552,7.9902 24,7.9902 C23.448,7.9902 23,7.5422 23,6.9902 C23,6.4382 23.448,5.9902 24,5.9902 C24.552,5.9902 25,6.4382 25,6.9902 L25,6.9902 Z" id="Stroke-1172" stroke="#009900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

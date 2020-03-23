@@ -2,9 +2,9 @@
 
 
 <html lang="en">
-        <link href="website.css" type="text/css" rel="stylesheet" />
-    
-    
+<link href="/css/website.css" type="text/css" rel="stylesheet" />
+
+
 <head>
     <meta charset="UTF-8">
     <script>
@@ -12,42 +12,42 @@
             {
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('POST', 'addDatabase.php', true);
-                xmlhttp.onreadystatechange = function() 
+                xmlhttp.onreadystatechange = function()
                 {
                     if(this.readyState == 4 && this.status == 200)
                          {
                 document.getElementById("tableArea").innerHTML = this.responseText;
             }
         };
-                
+
                 var category = document.forms[0]["category"].value;
                 var title = document.forms[0]["title"].value;
-                var comments = document.forms[0]["comments"].value;    
-                
+                var comments = document.forms[0]["comments"].value;
+
          xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xmlhttp.send('category=' + encodeURIComponent(category) + "&title=  " + encodeURIComponent(title) + "&comments=" + 
+        xmlhttp.send('category=' + encodeURIComponent(category) + "&title=  " + encodeURIComponent(title) + "&comments=" +
             encodeURIComponent(comments));
-        
+
         return false;
             }
-            
-    
-    
+
+
+
         </script>
     </head>
- 
-    <body>
-    
 
-       
+    <body>
+
+
+
         <button type="button">Ideas</button>
         <button type="button">Feedback</button>
         <button type="button">Feature request</button>
-        
+
         <div id="tableArea"></div>
-        
+
 <form method="post" onSubmit="return sendToServer()">
-    
+
     <div class="category">
     <p>
     <label for="catagory"> Select a category</label>
@@ -56,20 +56,20 @@
     <option value="Idea" >Idea</option>
     <option value="Feedback" >Feedback</option>
     <option value="Feature request" >Feature request</option>
-    <option value="Other" >Other</option>      
+    <option value="Other" >Other</option>
     </select>
     </p>
         </div>
-        
+
     <textarea name="title" cols="90" rows="1" > Title</textarea><br>
     <textarea name="comments" cols="90" rows="7"> Tell us what you thought...</textarea>
     <br>
     <input type="submit" value="Submit review" />
-    
-    
+
+
     </form>
-     
-        
-           
+
+
+
 </body>
 </html>

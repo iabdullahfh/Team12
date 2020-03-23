@@ -1,0 +1,93 @@
+.footer{
+
+  background-color:#003349;
+}
+
+div.search
+{
+padding: 50px 18px;
+width: 50%;
+}
+
+div.icons
+{
+	margin: 20px;
+	display: inline-block;
+}
+p{
+	color: rgba(255, 255, 255, 0.55);
+	font-family: "AdelleSansSAGE";
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+
+}
+img
+{
+	text-indent:-9999px;
+
+}
+
+ul
+{
+	list-style-type:none;
+	color: rgba(255, 255, 255, 0.55);
+	font-family: "AdelleSansSAGE";
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    width: 25%;
+	display: inline;
+	float: right;
+
+}
+li
+{
+
+	text-align: centre;
+	text-decoration: none;
+    font-family: "AdelleSAGE";
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    padding: 0;
+    text-align: left;
+    color: #ffffff;
+    background-color: transparent;
+    transition: all ease 0.3s;
+
+
+}
+a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+hr {
+  display: block;
+  margin-top: 25em;
+  margin-bottom: 15em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
