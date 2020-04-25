@@ -1,57 +1,38 @@
-<?php include 'Header.php' ?>
-<head>
-  <meta charset="utf-8">
-  <title>Sign up</title>
+<?php require 'header.php';?>
+  <!doctype html>
+<html lang="en">
+  <head>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/signup.css">
+    <title>Feedback Index</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</head>
+    <link rel="stylesheet" href="css/signup.css">
+  </head>
+    
+ <main>
 
-<main>
-<script type="text/javascript">
+  <!-- this container is from https://bootsnipp.com/snippets/a6Pdk -->
+  <div class="container">
+        <div class="card card-container">
+            
+            <img id="profile-img" class="profile-img-card" src="images/avatar.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" action="includes/signup.inc.php" name="signup" method="post">
+                
+                <input type="text" class="form-control" placeholder="Username" name="username" value="<?php echo $_GET["uid"]; ?>" required autofocus>
+                <input type="email" class="form-control" placeholder="Email Address" name="email" value="<?php echo $_GET["email"]; ?>" required>
+                <input type="text" class="form-control" placeholder="First Name" name="firstName" required>
+                <input type="text" class="form-control" placeholder="Last Name" name="lastName" required>
+                <input type="password" class="form-control" placeholder="Password" name="pwd" required>
+                <input type="password" class="form-control" placeholder="Repeat Password" name="pwd-repeat" required>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" name="signup-submit">Sign up</button>
+            </form><!-- /form -->
+            
+        </div><!-- /card-container -->
+  </div><!-- /container -->
 
-function validateForm(){
+ </main>
 
-/*
-  if (document.signup.uid.value == "") {
-
-    document.getElementById("uidlable").innerHTML = "Please provide your username";
-    document.signup.uid.focus();
-    return false;
-  }
-  */
-  return (true);
-}
-
-</script>
-
-<div class="main">
-
-  <div class="signup">
-
-    <h2>Sign up</h2>
-    <form action="includes/signup.inc.php" name="signup" method="post" onsubmit="return(validateForm());">
-
-      <label id="uidlable"></label>
-      <input type="text" name="uid" placeholder="Username" value="<?php echo $_GET["uid"]; ?>"><br>
-      <input type="text" name="email" placeholder="E-mail" value="<?php echo $_GET["email"]; ?>"><br>
-      <input type="password" name="pwd" placeholder="Password"><br>
-      <input type="password" name="pwd-repeat" placeholder="Repeat password"><br>
-      <button type="submit" name="signup-submit">Sign up</button>
-
-
-    </form>
-
-  </div>
-
-</div>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-</main>
-<!-- footer page -->
-<?php include 'footer.html' ?>
+</html>
