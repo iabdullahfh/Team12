@@ -69,7 +69,7 @@ session_start();
                           <a class="nav-item nav-link text-center" href="signup.php"><i class="fas fa-user-plus"></i> Register</a>';
                     }
                     else {
-                      echo '<a class="nav-item nav-link text-center" href="#"><i class="far fa-user"></i> My Acount</a>
+                      echo '<a class="nav-item nav-link text-center" href="account.php"><i class="far fa-user"></i> My Acount</a>
                             <a class="nav-item nav-link text-center" href="includes/logout.inc.php" id="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>';
                     }
                     
