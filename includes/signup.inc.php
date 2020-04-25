@@ -5,48 +5,38 @@ if (isset($_POST['signup-submit'])) {
   require 'db.inc.php';
 
 
-$username = $_POST['uid'];
+$username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['pwd'];
 $repeatPassword = $_POST['pwd-repeat'];
 
 
-/*
-if (preg_match("/^[A-Za-z0-9_-]{3,15}$/",$username)) {
-
-  echo "Valid Username: ". $username;
-}
-else {
-
-  echo "Invalid Username! ". $username;
-}
-*/
 
 // check empty fields, send user back to signup
 if(empty($username) || empty($email) || empty($password) || empty($repeatPassword)) {
 
-  header("Location: ../signup.php?error=emptyfields&uid=".$username."&email=".$email);
+  header("Location: ../signup.php?error=emptyfields&username=".$username."&email=".$email);
   exit();
 }
 
 // check email format
 elseif (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 
-  header("Location: ../signup.php?error=invalidemail&uid=".$username);
+  header("Location: ../signup.php?error=invalidemail&username=".$username);
   exit();
 }
 
 // check username format
 elseif (!preg_match("/^[A-Za-z0-9_-]{3,15}$/",$username)) {
 
-  header("Location: ../signup.php?error=invaliduid&email=".$email);
+  header("Location: ../signup.php?error=invalidusername&email=".$email);
   exit();
 }
 
 // check password
 else if ($password !== $repeatPassword) {
 
-  header("Location: ../signup.php?error=passwordcheck&uid=".$username."&email=".$email);
+  header("Location: ../signup.php?error=passwordcheck&username=".$username."&email=".$email);
   exit();
 }
 
@@ -88,7 +78,7 @@ else {
 
         mysqli_stmt_bind_param($stmt, "sss", $username, $hashPwd, $email);
         mysqli_stmt_execute($stmt);
-        header("Location: ../signup.php?signup=success");
+        header("Location: ../login.php?signup=success");
         exit();
       }
     }
