@@ -1,5 +1,54 @@
-.main{
-
-background: lightgrey;
-
+ /*
+ * General styles
+ */
+ html, body{
+     height: 100%;
+ }
+ main{
+     
+    height: 100%;
+    background-color: lightgrey;
+    padding: 10px;
+    
+    
 }
+
+.container{
+    background-color: rgba(255, 255, 255, 1.0);
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.content-table{
+    overflow-x:auto;
+}
+
+.content-table a{
+    text-decoration: none;
+    
+}
+
+.tr-header{
+
+    background-color: #00a376;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #00a376;
+    color: white;
+}
+
+tbody a{
+    color: black;
+}
+
+tbody a:hover{
+    color: white;
+    
+}
+
+
+
+
