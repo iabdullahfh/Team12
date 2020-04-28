@@ -52,7 +52,7 @@
                     <td>'.$row['ProductName'].'</td>
                     <td>'.$row['Price'].'</td>
                     <td>'.$row['Type'].'</td>
-                    <td><a href="posts.php?ProductID='.$row['ProductID'].'&Posts=feedback"><button class="btn" type="button">Click Here</button></a>
+                    <td><a href="feedback.php?id=' . $row['ProductID'] . '"><button class="btn" type="button">Click Here</button></a>
                     </td>
                     </tr>';
 
