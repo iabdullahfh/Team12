@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  
+        <title>Vote Line Chart</title>
+        <style>
+            .box{
+
+                widows: 1900px;;
+                height:960px;
+                background-color:lightgrey;
+            }
+        </style>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+       
+      </head>
+        
+    
+  
+    <div class="box">
+        <script src="echarts.min.js"></script>
+         <script>
+         var myChart = echarts.init(document.querySelector(".box"));
+         
+         var option = {
+    title: {
+        text: 'Vote statistics'
+        
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['Feedback', 'Idea', 'Feature Request', ]
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: true,
+        data: ['User1', 'User2', 'User3', 'User4', 'User5']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+            name: 'Feedback',
+            type: 'line',
+           
+            data: [3, 11, 6, 16, 5]
+        },
+        {
+            name: 'Idea',
+            type: 'line',
+            
+            data: [7, 12, 9, 15, 8]
+        },
+        {
+            name: 'Feature Request',
+            type: 'line',
+            
+            data: [6, 17, 4, 8, 10]
+        },
+       
+    ]
+};
+
+
+         
+    myChart.setOption(option);
+         </script>
+<body>
+</html>
+   
+  
+  
+    

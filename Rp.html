@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  
+        <title>Report Pie Chart</title>
+        <style>
+            .box{
+
+                widows: 1900px;;
+                height:960px;
+                background-color:lightgrey;
+            }
+        </style>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+       
+      </head>
+        
+    
+  
+    <div class="box">
+        <script src="echarts.min.js"></script>
+         <script>
+         var myChart = echarts.init(document.querySelector(".box"));
+         
+         var option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b}: {c} ({d}%)'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 10,
+        data: ['Feedback', 'Idea', 'Feature Request']
+    },
+        toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    series: [
+        {
+            name: 'Status',
+            type: 'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                show: false,
+                position: 'center'
+            },
+            emphasis: {
+                label: {
+                    show: true,
+                    fontSize: '30',
+                    fontWeight: 'bold'
+                }
+            },
+            labelLine: {
+                show: false
+            },
+            data: [
+                {value: 3, name: 'Feedback'},
+                {value: 3, name: 'Idea'},
+                {value: 2, name: 'Feature Request'},
+
+            ]
+        }
+    ]
+};
+
+
+         
+    myChart.setOption(option);
+         </script>
+<body>
+</html>
+   
+  
+  
+    

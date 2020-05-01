@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  
+        <title>Product Chart</title>
+        <style>
+            .box{
+
+                widows: 1900px;;
+                height:960px;
+                background-color: lightgrey;
+            }
+        </style>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+       
+      </head>
+        
+    
+  
+    <div class="box">
+        <script src="echarts.min.js"></script>
+         <script>
+         var myChart = echarts.init(document.querySelector(".box"));
+         
+         var option = {
+    
+    title: {
+        text: 'Price Chart'
+       
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: '{b}: {c})'
+    },
+    xAxis: {
+        type: 'category',
+        data: ['Procuct1', 'Procuct2', 'Procuct3', 'Procuct4', 'Procuct5']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [2940.18, 3109, 2400, 1790, 3500],
+        type: 'bar'
+    }]
+};
+
+         
+    myChart.setOption(option);
+         </script>
+<body>
+</html>
+   
+  
+  
+    
