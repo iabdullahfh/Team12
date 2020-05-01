@@ -1,0 +1,58 @@
+
+ul { list-style: none; }
+ul>li>a {
+color: grey;
+text-decoration: none;
+line-height: 1.8;
+}
+
+
+.col-heading {
+    
+display: block;
+color:#FFFFFF;
+font-family: "AdelleSansSAGE";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal; 
+    font-stretch: normal;
+margin: 1rem 0;
+padding: .4rem 0px;
+border-bottom: 1px solid #FFFFFF; 
+letter-spacing: 3px;
+}
+
+#bottom-footer {
+background-color:#003349;
+color:white;
+   
+
+}
+.vertical-links>li {
+    
+display: inline-block;
+vertical-align: text-bottom;
+}
+.vertical-links>li>a {
+color: white;
+
+margin-left: 10px;
+list-style-type:square;
+}
+div.icons
+{
+    margin: 15px;
+	display: inline-grid;
+}
+div.search
+{
+    color: white;
+padding: 50px 5px;
+width: 100%;
+}
+a
+{
+   
+    text-decoration: none;
+    color: white;
+}
