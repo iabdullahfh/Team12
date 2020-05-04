@@ -1,4 +1,7 @@
-<?php require 'header.php';?>
+<?php require 'header.php';
+if(!isset($_SESSION['UserID']))
+
+    header('Location: index.php');?>
   <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/accountcss.css">
   </head>
     
     
@@ -25,20 +28,21 @@
 
           <ul class="list-group">
             <li class="list-group-item active">Account</li>
-            <li class="list-group-item"><a class="nav-item" href="index.php">My details</a></li>
-            <li class="list-group-item"><a class="nav-item" href="index.php">Change password</a></li>
-            <li class="list-group-item"><a class="nav-item" href="index.php">My posts</a></li>
+            <li class="list-group-item"><a class="nav-item" href="account.php?account=details">My details</a></li>
+            <li class="list-group-item"><a class="nav-item" href="account.php?account=pwd">Change password</a></li>
+            <li class="list-group-item"><a class="nav-item" href="account.php?account=post">My posts</a></li>
+              
           </ul>
-       
-          <ul class="list-group">
+       <?php  if (($_SESSION['Type']==1))
+{
+          echo '<ul class="list-group">
             <li class="list-group-item active">Administration</li>
-            <li class="list-group-item"><a class="nav-item" href="index.php">Add Product</a></li>
-            <li class="list-group-item"><a class="nav-item" href="index.php">Blocked Users</a></li>
-            <li class="list-group-item"><a class="nav-item" href="index.php">Deleted Posts</a></li>
-            <li class="list-group-item"><a class="nav-item" href="index.php">Reports</a></li>
-          </ul>
-
-
+            <li class="list-group-item"><a class="nav-item" href=feedbackAdmin.php>All reviews</a></li>
+            <li class="list-group-item"><a class="nav-item" href="report.php">Reports</a></li>
+            
+          </ul>';
+}
+?>
       </div><!-- End side bar -->
 
       <!-- content -->
@@ -47,7 +51,7 @@
       <div class="container-content">
         
         <?php 
-        if ($_GET['account'] == '' || $_GET['account'] == 'details') {
+        if ($_GET['account'] == "" || $_GET['account'] == 'details') {
 
           echo '<div>
           <h1>My Details</h1>
@@ -68,10 +72,7 @@
               </div>
             </div>
       
-            <div class="row">
-              <div class="col-xs-12 col-md-8">
-              <button type="submit" class="btn" name="details-btn">Update</button>
-              </div>
+        
             </div>
             
           </div>
@@ -112,23 +113,91 @@
         
         elseif ($_GET['account'] == 'post') {
           
-          echo '<h1>My Posts</h1>
-          <ul class="list-group">
-            <li class="list-group-item active"> title</li>
-            <li class="list-group-item"><p>post content <br><br><br><br><br>
-            </p></li>
-            <li class="list-group-item">date: 12/12/1990 time: 12:00</li>
-          </ul>';
+         echo '<h1>My Posts</h1>
+          <br>';
+          $idSession = $_SESSION['UserID'];
+          $content = $conn->query("SELECT * FROM feedback WHERE UserID = '$idSession' ORDER BY Date DESC");
+
+          foreach ($content->fetch_all(MYSQLI_ASSOC) as $value) {
+            echo '<div class="commentBox">
+              <div class="commentTop">
+
+              <div class="displayCategory">';
+              echo $value['Category'];
+              echo '</div>
+
+              <div class="displayDate">
+              posted on ';
+              echo $value['Date'];
+              echo '</div>
+              </div>';
+
+              echo '<div class="commentBottom">
+              <div class="displayTitle">' . $value['Title'] . '</div>';
+              $commentSec = $value['Comment'];
+              $upVote = $value['upVote'];
+              $feedback_id = $value['FeedbackID'];
+              $response = $value['Response'];
+
+              echo '<div class="displayComment">';
+              echo $commentSec;
+              echo '</div>';
+              echo '</div>';
+
+              echo '<div class="commentFooter">';
+
+              if ($response == null)
+              {
+                echo 'total votes:  ';
+                echo $upVote;
+              }
+              else
+              {
+                  echo "Voting is locked for this post";
+              }
+              echo '</div>';
+              echo '</div>';
+              echo '<br>';
+            };
 
         }?>
+
+          <?php
+          if($_SESSION['Type']==1){
+          if ($_GET['account'] == 'reviews')  {
+          
+          echo '<h1>All reviews</h1>';
+          
+
+        }
+          else if ($_GET['account'] == 'report') {
+          
+          echo '<h1>Report</h1>';
+
+        }}else if($_SESSION['Type']!=1){
+              if($_GET['account'] == 'reviews' || ($_GET['account'] == 'report'))
+          {
+              echo '<ul class="list-group">
+            
+            <li class="list-group-item"><a class="nav-item" href="account.php?account=details">My details</a></li>
+            
+              
+          </ul>';
+          }
+          }
+          
+          
+          ?>
 
         
 
       </div>
+          
     </div>
 </div>
-
+    </div>
 </main>
 
 </body>
 </html>
+
